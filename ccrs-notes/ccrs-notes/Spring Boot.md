@@ -89,4 +89,60 @@ Indicates that an annotated class is a "Repository", originally defined by [[Dom
 Link: 
 [Repository](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Repository.html)
 
+## Autowired
+Will provide a proxy if needed for injections.
 
+
+# Injection 💉 
+
+## Injected circular dependencies
+**Why field/setter injection "fixes" it, and constructor doesn't:** This is the core technical insight you missed. Spring has a **three-level cache mechanism** for singleton beans:
+- Level 1: fully initialized singletons
+- Level 2: "early" bean references (raw instance, not yet dependency-injected)
+- Level 3: factory objects that can produce early references (for proxying)
+With **field/setter injection**, Spring can call the **no-arg constructor first**, put that half-built object into the early-reference cache, _then_ inject the dependencies afterward via reflection.So when `ServiceB` needs `ServiceA` mid-construction, Spring hands it the early (not-yet-fully-injected) reference — it works because the object _exists_ before its fields are populated. With **constructor injection**, the object literally cannot exist until the constructor completes — there's no "early reference" to hand out, since the dependency is required _at instantiation time_. That's why constructor-injected circular dependencies always fail, while field/setter-injected ones can succeed (though it's still considered a code smell).
+
+**`@Lazy`** on one of the injected dependencies — Spring injects a proxy that only resolves the real bean on first method call, breaking the eager construction cycle
+
+**`ApplicationContext.getBean()` lookup manually / `ObjectProvider<T>`** — defers resolution
+
+# Transactional
+Transactional creates a proxy around the bean using it. Spring implements transactions by using [[Aspect-Oriented Programming]]. When calling a @Transactional is injected it doesn't inject the raw Service but a proxy interceptor.
+- Opens/joins a DB transaction (via `PlatformTransactionManager`, e.g. grabbing a `Connection` from the pool and calling `setAutoCommit(false)`)
+- Delegates to the real method body
+- Commits or rolls back afterward
+
+
+If we have this situation:
+```java
+@Service
+public class OrderService {
+
+    @Autowired
+    private OrderService self; // or however you'd get a proxy
+
+    @Transactional
+    public void placeOrder(Order order) {
+        saveOrder(order);
+        notifyWarehouse(order);
+    }
+
+    @Transactional
+    public void saveOrder(Order order) {
+        // saves to DB
+    }
+
+    public void notifyWarehouse(Order order) {
+        // calls external service
+    }
+}
+```
+The self -invocation will bypass the proxy entirely. `this` refers to the raw target object, not the proxy wrapping it. So `saveOrder()`'s `@Transactional` annotation is **completely ignored** in that call path. To work aorun this you need to use the self property. So that the method goes through the transaction: `self.saveOrder()` then `this.saveOrder()` will fix the problem. SO the call goes through the [[Aspect-Oriented Programming|AOT]] proxy.
+
+> [!info] Proxy needs to be invoked for variables like `REQUIRES_NEW` are used!!!!!
+
+# Hikary
+**The formula** (this is a known one, from HikariCP's own docs, based on a PostgreSQL "Pool Sizing" paper by Bob Wan/Neustadt): `pool size = Tn × (Cm - 1) + 1` where `Tn` = number of threads (i.e., how many concurrent tasks might need a connection), `Cm` = number of connections each transaction typically holds concurrently (usually 1). More practically, the widely-quoted heuristic is: `connections = ((core_count * 2) + effective_spindle_count)` The real point interviewers want: **a connection pool should be sized based on the database server's actual concurrency capacity** (CPU cores, disk I/O, max_connections setting on Postgres itself), **not on how many app threads you have**. Bigger pool ≠ better — past a certain point, more connections just cause more contention _on the DB side_ (context switching, lock contention), so blindly increasing it is also wrong. You didn't mention this — that "more pool = better" is a trap too.
+
+Link:
+[Pool Sizing and Performance Tuning](https://deepwiki.com/brettwooldridge/HikariCP/4.2-pool-sizing-and-performance-tuning)

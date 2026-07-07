@@ -3,3 +3,4 @@ Domain-Driven Design is an approach to software development that centers the dev
 
 Links:
 [Domain-Driven Design by Eric Evens](https://fabiofumarola.github.io/nosql/readingMaterial/Evans03.pdf)
+[[Aspect-Oriented Programming]]

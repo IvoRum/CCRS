@@ -1,1 +1,1 @@
-This is the place where I will refine my skills on [[Spring Boot]], [[System architecture]], [[Vue js]], .
+This is the place where I will refine my skills on [[Spring Boot]], [[System architecture]], [[General front End]], [[Vue js]] nad [[PostgresSQl]] .
