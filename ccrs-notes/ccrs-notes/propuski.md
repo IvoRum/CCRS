@@ -1,0 +1,4 @@
+- Dead message q
+- Versining of endpoinds
+- Decontionesing endpoints
+- 

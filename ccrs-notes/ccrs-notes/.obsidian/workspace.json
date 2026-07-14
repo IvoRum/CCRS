@@ -13,34 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "7366e6c94c4cbe06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "0632c9bcf78e2d8d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "PostgresSQl.md",
                 "mode": "source",
                 "source": false
@@ -50,21 +22,49 @@
             }
           },
           {
-            "id": "ecd7bfee8798a66b",
+            "id": "609a004fd98acda6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Aspect-Oriented Programming.md",
+                "file": "propuski.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Aspect-Oriented Programming"
+              "title": "propuski"
+            }
+          },
+          {
+            "id": "6f9a3fd772c728e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "add-two-numbers.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "add-two-numbers"
+            }
+          },
+          {
+            "id": "94b488fe8abe39a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Roman numerals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Roman numerals"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -226,14 +226,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "0632c9bcf78e2d8d",
+  "active": "94b488fe8abe39a8",
   "lastOpenFiles": [
+    "add-two-numbers.md",
+    "Roman numerals.md",
+    "propuski.md",
     "PostgresSQl.md",
+    "Spring Boot.md",
     "Welcome.md",
+    "Aspect-Oriented Programming.md",
     "General front End.md",
     "imgs/Pasted image 20260707135043.png",
-    "Spring Boot.md",
-    "Aspect-Oriented Programming.md",
     "Exceptions.md",
     "Domain-Driven Design.md",
     "System architecture.md",
