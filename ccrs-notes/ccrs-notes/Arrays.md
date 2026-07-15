@@ -1,4 +1,5 @@
 
+С тези алгоритми гоним constant time n(1).x
 # Two Pointers
 Array is sorted (or can be sorted), and you're looking for pairs/triplets matching a condition.
 "pair that sums to," "sorted array," "palindrome check"
@@ -33,3 +34,17 @@ for (int right = 0; right < s.length(); right++) {
 ```
 
 Example problem: Longest Substring Without Repeating Characters, Max Sum Subarray of size K
+
+# Prefix Sum
+Need repeated range-sum queries, or "subarray sums to X"
+```java
+// Range sum queries
+int[] prefix = new int[nums.length + 1];
+for (int i = 0; i < nums.length; i++) {
+    prefix[i + 1] = prefix[i] + nums[i];
+}
+// sum of range [i, j] inclusive:
+int rangeSum = prefix[j + 1] - prefix[i];
+```
+
+[[subarray-sum-equals-k]]
