@@ -5,6 +5,7 @@
 # Algorithms:
 [[Arrays]]
 [[Linked Lists]]
+[[Maps]]
 
 
 # Problems:
