@@ -13,6 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Maps.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Maps"
+            }
+          },
+          {
+            "id": "2bc7bc705bf53ac8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "part 2.md",
                 "mode": "source",
                 "source": false
@@ -27,12 +41,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "part 2.md",
+                "file": "Two Sum.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "part 2"
+              "title": "Two Sum"
+            }
+          },
+          {
+            "id": "306efaf61b90ec24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Кандитатури.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Кандитатури"
             }
           },
           {
@@ -92,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -254,17 +282,30 @@
       "bases:Create new base": false
     }
   },
-  "active": "41c7073fac277649",
+  "active": "2bc7bc705bf53ac8",
   "lastOpenFiles": [
+    "Pasted image 20260717163811.png",
+    "Valid anagrams.md",
     "Maps.md",
     "part 2.md",
+    "Linked Lists.md",
+    "Кандитатури.md",
+    "~WRL0991.tmp",
+    "~WRD0991.tmp",
+    "~$ver_letter_NTT.docx",
+    "~WRL2661.tmp",
+    "~WRD2637.tmp",
+    "cover_letter_NTT.docx",
+    "~WRL1780.tmp",
+    "~WRD1757.tmp",
+    "~WRL1407.tmp",
+    "~WRD1403.tmp",
+    "Two Sum.md",
     "Spirng boot Part 2.md",
     "Thing you need to say.md",
     "Walk me through your experience.md",
     "Welcome.md",
-    "Two Sum.md",
     "Event-Driven Architecture.md",
-    "Linked Lists.md",
     "propuski.md",
     "Subarray Sum Equals K.md",
     "System architecture.md",
@@ -280,9 +321,6 @@
     "General front End.md",
     "imgs/Pasted image 20260707135043.png",
     "Exceptions.md",
-    "Domain-Driven Design.md",
-    "Serverless-First & Edge Computing.md",
-    "imgs/Pasted image 20260707071556.png",
-    "imgs"
+    "imgs/Pasted image 20260707071556.png"
   ]
 }
