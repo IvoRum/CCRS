@@ -2,6 +2,8 @@
 [[Thing you need to say]]
 [[Walk me through your experience]]
 [[Spirng boot Part 2]]
+[[Common Java]]
+[[SQL]]
 # Algorithms:
 [[Arrays]]
 [[Linked Lists]]
@@ -28,14 +30,9 @@ O(log(n)) decide and conquer https://www.youtube.com/shorts/9cFdn5lf4W8
 | Sorted array             | O(log n) | O(n)     | O(n)                  | Yes        |
 | Hash table (`HashMap`)   | O(1) avg | O(1) avg | O(1) avg              | No         |
 | Fenwick/Segment tree     | O(log n) | O(log n) | —                     | For ranges |
-![[Pasted image 20260717163811.png]]
+
 
 # Need to read!!!!
-Java memory structure!!! 
-static and dinamic polimofisum!!!!
-overload vs overwiting!!!!
-sql - isolation layers
-idempotensy
-types of indexes
-load factor hash set -0.75 да се отоява когато стигне 16,32,тхен 0.75
-array lits how it works in java - 
+
+
+
