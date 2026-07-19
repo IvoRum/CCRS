@@ -27,26 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "part 2.md",
+                "file": "SQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "part 2"
-            }
-          },
-          {
-            "id": "9c661d0085d05b43",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Trees & Graphs.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Trees & Graphs"
+              "title": "SQL"
             }
           },
           {
@@ -148,7 +134,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -310,11 +296,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "9c661d0085d05b43",
+  "active": "2bc7bc705bf53ac8",
   "lastOpenFiles": [
-    "Trees & Graphs.md",
+    "Pasted image 20260719093143.png",
     "part 2.md",
     "SQL.md",
+    "Trees & Graphs.md",
     "Common Java.md",
     "Maps.md",
     "Pasted image 20260718075459.png",
@@ -349,7 +336,6 @@
     "add-two-numbers.md",
     "PostgresSQl.md",
     "Spring Boot.md",
-    "Aspect-Oriented Programming.md",
     "imgs/Pasted image 20260707135043.png",
     "imgs/Pasted image 20260707071556.png"
   ]
